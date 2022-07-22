@@ -1,0 +1,17 @@
+.footer-container{
+  background-color: var(--blue);
+  color: white;
+  padding: 2em 0em;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer-email{
+  font-weight: 500;
+}
+.footer-icons{
+  text-decoration: none;
+  font-size: 2em;
+}
+.footer-icons a{
+  color: white;
+}

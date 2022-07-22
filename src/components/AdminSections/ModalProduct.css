@@ -1,0 +1,12 @@
+.modal-container{
+  position: fixed;
+  height: 90vh;
+  width: 70vw;
+  top: 2%;
+  z-index: 500;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: scroll;
+}

@@ -1,0 +1,70 @@
+.logo-sm{
+  background-image: url('../logo-sm.png');
+  background-size: cover;
+  background-position: 45% 45%;
+  width: 300px;
+  
+}
+ul li{
+  list-style: none;
+}
+ul li a{
+  color: rgb(34, 34, 34);
+  font-weight: 500;
+}
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+.nav-container{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 5px;
+  border-bottom: 1px solid rgba(95, 95, 95, 0.658);
+}
+.nav-left{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 50%;
+  margin: 5px 10px;
+}
+.nav-left li{
+  padding: 5px;
+  margin: 5px 10px;
+}
+.nav-right{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
+  margin: 5px 10px;
+}
+.nav-right li{
+  padding: 5px;
+  margin: 5px 10px;
+}
+.search-bar{
+  width: 100%;
+  border: 1px solid rgb(126, 126, 126);
+  border-radius: 10px;
+  padding: 3px 5px;
+}
+.ul-container{
+  position: relative;
+}
+.category-container{
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  padding: 0px;
+  display: none;
+}
+.category-container li{
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid black;
+  padding: 10px 15px;
+}
+.ul-container:hover .category-container{
+  display: block;
+}

@@ -1,0 +1,32 @@
+.row-height{
+  height: 60vh;
+  margin-top: 2em;
+}
+.row-height .col-6{
+  background-size: cover;
+}
+.section-container{
+  height: 100%;
+}
+.section-img{
+  height: 50%;
+  border: 3px solid rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+.shadow-container h2{
+  font-weight: 700;
+  color: white; 
+}
+.shadow-container{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.466);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chart-link{
+  width: 100%;
+  height: 100%;
+}

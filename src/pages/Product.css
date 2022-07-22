@@ -1,0 +1,36 @@
+.color{
+  color: aqua;
+  font-size: 1.8em;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.agregar-producto:hover{
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+.agregar-producto{
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+.text-bold{
+  font-size: 1.4em;
+  font-weight: 450;
+}
+.--container{
+  height: 90vh;
+}
+.truck-icon{
+  font-size: 2em;
+  margin-bottom: 0.4em;
+  color: rgb(0, 155, 0);
+  transition: 2s;
+}
+.truck-icon:hover{
+  transform: translate(150px, 0px);
+}

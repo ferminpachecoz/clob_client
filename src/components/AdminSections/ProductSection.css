@@ -1,0 +1,12 @@
+.all-products div {
+  height: 20vh;
+}
+.admin-product-container{
+  position: relative;
+  height: 100%;
+}
+.button{
+  width: 10em;
+  margin-bottom: 0.8em;
+  font-size: 0.9em;
+}

@@ -1,0 +1,44 @@
+.form-container{
+  padding: 10px;
+  z-index: 10;
+  position: relative;
+}
+.form-container h3{
+  color: black;
+}
+.form-product div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-product div label{
+  margin: 5px 0px;
+}
+.form-container div input, select{
+  outline: none;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 10px;
+  padding: 5px 5px;
+  margin: 5px 0px;
+}
+.form-container div input:focus, select:focus{
+  box-shadow: 2px 2px 5px var(--light-blue), 2px 2px 5px var(--light-blue) inset;
+}
+.button{
+  align-self: center;
+  margin-top: 1em;
+}
+.close-icon{
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  font-size: 2em;
+  color: black;
+}
+.close-icon:hover{
+  color: black;
+}
+.form-comment{
+  font-size: 0.8em;
+  color: rgb(49, 49, 49);
+}
