@@ -10,3 +10,12 @@
   margin-bottom: 0.8em;
   font-size: 0.9em;
 }
+@media (max-width: 576px){
+  .section-title{
+    font-size: 1.2em;
+  }
+  .btn-size-sm{
+    font-size: 0.6em;
+    font-weight: 600;
+  }
+}

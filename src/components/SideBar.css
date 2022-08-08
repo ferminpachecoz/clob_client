@@ -25,3 +25,13 @@
 .sidebar-container a:hover{
   color: white;
 }
+@media (max-width: 450px){
+  .sidebar-container a{
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 320px){
+  .sidebar-container a{
+    font-size: 0.7em;
+  }
+}

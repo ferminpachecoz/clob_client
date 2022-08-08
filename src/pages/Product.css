@@ -23,14 +23,26 @@
   font-weight: 450;
 }
 .--container{
-  height: 90vh;
+  height: auto;
 }
 .truck-icon{
   font-size: 2em;
   margin-bottom: 0.4em;
   color: rgb(0, 155, 0);
-  transition: 2s;
+  transition: transform 2s;
 }
-.truck-icon:hover{
-  transform: translate(150px, 0px);
+@media (min-width: 768px){
+  .--container{
+    height: 80vh;
+  }
+}
+@media (min-width: 1000px){
+  .--container{
+    height: 85vh;
+  }
+}
+@media (min-width: 1300px){
+  .--container{
+    height: 90vh;
+  }
 }

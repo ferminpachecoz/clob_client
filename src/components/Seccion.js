@@ -8,7 +8,7 @@ export default function Ofertas({title, products}) {
       <div className='d-flex justify-content-center'>
         <h1 className='my-4'>{title}</h1>
       </div>
-      <div className='row row-cols-4 g-1'>
+      <div className='row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-1'>
         {
           products.map((item, i)=>
             <div className='col' key={i} >

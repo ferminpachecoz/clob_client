@@ -19,7 +19,7 @@ function Map (){
         <Marker position={{lat: -41.12178670310981, lng: -71.40375798504826}} />
       </GoogleMap>
       <div className='row mt-4'>
-        <div className='col-6 info-contact'>
+        <div className='col-12 col-md-6 info-contact'>
           <div className='d-flex justify-content-center align-items-center'>
             <div className='col-8'>
               <h3>Mantente en contacto</h3>
@@ -40,7 +40,7 @@ function Map (){
             </div>
           </div>
         </div>
-        <div className='col-6'>
+        <div className='col-12 col-md-6'>
           <div className='d-flex justify-content-center align-items-center'>
             <div className='col-8'>
               <h3>Hacé tu consulta!</h3>

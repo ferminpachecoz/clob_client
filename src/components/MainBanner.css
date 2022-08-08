@@ -1,6 +1,13 @@
 .main-banner{
-  background-image: url('../main-banner.png');
   width: 100%;
-  height: 500px;
-  background-size: cover;
+  height: auto;
+}
+.main-banner img{
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 300px) {
+  .main-banner{
+    display: none;
+  }
 }

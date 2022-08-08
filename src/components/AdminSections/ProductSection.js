@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductSection.css';
 import CardSm from './CardSm';
-import ModalProduct from './ModalProduct';
+import Modal from '../Modal';
 import ProductForm from './ProductForm';
 import CategoryForm from './CategoryForm';
 import { useState, useEffect } from 'react';
@@ -26,28 +26,28 @@ export default function ProductSection() {
   return (
     <div className='container overflow-hidden admin-product-container'>
       {show == 1 &&
-      <ModalProduct>
+      <Modal>
         <ProductForm click={handleClick} title="Editar Producto" btn="Editar" purl="edit" selected={selected} />
-      </ModalProduct>
+      </Modal>
       }
       {show == 2 &&
-        <ModalProduct>
+        <Modal>
           <ProductForm click={handleClick} title="Agregar Producto" btn="Agregar" purl="create"/>
-        </ModalProduct>
+        </Modal>
       }
       {show == 3 &&
-        <ModalProduct>
+        <Modal>
           <CategoryForm click={handleClick} />
-        </ModalProduct>
+        </Modal>
       }
-      <div className='d-flex justify-content-between align-items-center mb-3'>
-        <h1 className='mx-3 my-3'>Todos los Productos</h1>
+      <div className='d-flex flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row justify-content-between align-items-center mb-3'>
+        <h1 className='mt-3 section-title'>Todos los Productos</h1>
         <div>
-          <button className='button bg-green-gradient me-3' onClick={()=>handleClick(2)}>Agregar producto</button>
-          <button className='button bg-green-gradient' onClick={()=>handleClick(3)}>Agregar categoria</button>
+          <button className='button btn-size-sm bg-green-gradient me-3' onClick={()=>handleClick(2)}>Agregar producto</button>
+          <button className='button btn-size-sm bg-green-gradient' onClick={()=>handleClick(3)}>Agregar categoria</button>
         </div>
       </div>
-      <div className='row row-cols-4 g-1 all-products'>
+      <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-1 all-products'>
         {products &&
           products.map((item, i)=>  
             <div className='col' key={i}>

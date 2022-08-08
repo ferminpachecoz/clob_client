@@ -7,10 +7,12 @@ export default function ProductForm({click, title, btn, purl, selected}) {
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('');
   const [collection, setCollection] = useState('');
+  const [discount, setDiscount] = useState('');
   const [files, setFiles] = useState([]);
   const [description, setDescription] = useState('')
   const [sproduct, setSProduct] = useState();
   const [allCategory, setAllCategory] = useState();
+  const [error, setError] = useState(false)
 
   useEffect(()=>{
     if(selected){
@@ -38,7 +40,6 @@ export default function ProductForm({click, title, btn, purl, selected}) {
       .then(data => setAllCategory(data))
       .catch(err => console.error(err))
   },[])
-  console.log(allCategory);
     
   const handleCreate = e =>{
     e.preventDefault();
@@ -58,6 +59,9 @@ export default function ProductForm({click, title, btn, purl, selected}) {
     if(collection){
       data.append("collection", collection)
     }
+    if(discount){
+      data.append("discount", discount)
+    }
     if(category){
       data.append("id_category", category)
     }
@@ -70,11 +74,11 @@ export default function ProductForm({click, title, btn, purl, selected}) {
     }
     fetch(`http://localhost:3001/${purl}`, request)
       .then(res => res.json())
-      .then(a => a.status=='ok'?document.location.reload():console.log(a))
+      .then(a => console.log(a))
       .catch(err => console.error(err))
   }
   return (
-    <div className='form-container'>
+    <div className='form-container p-1'>
       <h3>{title}</h3>
       <a href="#" className='close-icon'>
         <i className="bi bi-x" onClick={()=>click(0)}></i>
@@ -89,6 +93,9 @@ export default function ProductForm({click, title, btn, purl, selected}) {
           <div>
             <label>Precio:</label>
             <input type="text" name='price' defaultValue={sproduct?sproduct.price:""} onChange={e => setPrice(e.target.value)}/>
+            {error.price &&
+              <p className='validation-text'>{error.price.msg}</p>
+            }
           </div>
           <div>
             <label>Descripcion</label>
@@ -116,10 +123,19 @@ export default function ProductForm({click, title, btn, purl, selected}) {
             <p className='form-comment'>*Si no se modifica este campo entonces tomará el valor previo</p>
           </div>
           <div>
+            <label>Descuento(%)</label>
+            <input type="text" name='discount' defaultValue={sproduct?sproduct.discount:""} placeholder='Ingrese un porcentaje...' onChange={e => setDiscount(e.target.value)} />
+          </div>
+          <div>
             <label>Fotos del producto:</label>
             <input type="file" name='images' multiple onChange={e => setFiles(e.target.files)} />
             <p className='form-comment'>*Si no se modifica este campo entonces tomará el valor previo</p>
           </div>
+          {error &&
+            <div>
+              <p className='validation-text'>Hubo un error, por favor verifique que todos los campos con el signo "*" esten completos.</p>
+            </div>
+          }
           <div className='button-container'>
             <button className='button bg-green-gradient' type='submit'>{btn}</button>
           </div>

@@ -1,10 +1,11 @@
 .logo-sm{
   background-image: url('../logo-sm.png');
   background-size: cover;
-  background-position: 45% 45%;
+  background-position: 45% 42%;
   width: 300px;
-  
+  height: 60px;
 }
+
 ul li{
   list-style: none;
 }
@@ -45,9 +46,12 @@ a:link, a:visited, a:active {
 }
 .search-bar{
   width: 100%;
-  border: 1px solid rgb(126, 126, 126);
   border-radius: 10px;
   padding: 3px 5px;
+  position: relative;
+}
+.search-bar input{
+  border: 1px solid rgb(126, 126, 126);
 }
 .ul-container{
   position: relative;
@@ -67,4 +71,67 @@ a:link, a:visited, a:active {
 }
 .ul-container:hover .category-container{
   display: block;
+}
+.burger-menu{
+  display: none;
+}
+.xs-menu{
+  height: auto;
+  width: 100%;
+  padding: 10px;
+}
+.xs-menu p{
+  text-align: center;
+}
+.xs-menu a{
+  text-decoration: none;
+  color: black;
+}
+.xs-menu a:visited{
+  color: black;
+}
+.text-xs-container{
+  background-color: rgba(0, 0, 0, 0.123);
+  padding: 10px 0px;
+}
+.text-xs-container .text-xs-menu{
+  font-size: 0.9em;
+}
+.query-results{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  position: absolute;
+  z-index: 2000;
+}
+.query-results ul{
+  margin: 0;
+  padding-left: 10px;
+}
+
+@media (max-width: 800.98px) {
+  .nav-left, .nav-right{
+    display: none;
+  }
+  .logo-sm{
+    width: 150px;
+    height: 30px;
+    background-position: 45% 42%;
+  }
+  .burger-menu{
+    display: block;
+    font-size: 1.2em;
+  }
+  .burger-menu .icons-container{
+    position: absolute;
+    right: 2%;
+  }
+  .search-container{
+    margin-right: 15%;
+    width: 65%;
+    position: relative;
+  }
+  .search-container input{
+    font-size: 0.9em;
+  }
 }

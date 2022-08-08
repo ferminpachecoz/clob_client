@@ -1,7 +1,6 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
-import Register from './pages/Register';
 import Login from './pages/Login';
 import Product from './pages/Product';
 import Category from './pages/Category';
@@ -12,7 +11,6 @@ function App() {
   return (
     <Routes>
       <Route exact path='/' element={<Home />} />
-      <Route path='/register' element={<Register />} />
       <Route path='/login' element={<Login />} />
       <Route path='/producto/:id' element={<Product />} />
       <Route path='/categoria' element={<Category />} />

@@ -12,3 +12,11 @@
 .card-content{
   padding: 5px;
 }
+.discount{
+  color: green;
+}
+@media (max-width: 600.98px){
+  .card-image{
+    height: 35vh;
+  }
+}
